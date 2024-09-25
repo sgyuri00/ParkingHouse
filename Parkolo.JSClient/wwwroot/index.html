@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Auto UI</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <h1>Cars</h1>
+
+    <div id="formdiv">
+        <label>License Plate Number</label>
+        <input type="text" id="rendszam" />
+        <label>Year</label>
+        <input type="number" id="gyartasiEv" />
+        <label>Brand</label>
+        <input type="text" id="marka" />
+        <label>Fuel type</label>
+        <input type="text" id="uzemanyag" />
+
+        <button type="button" onclick="create()">Add Car</button>
+    </div>
+
+    <div id="updateformdiv">
+        <label>License Plate Number</label>
+        <input type="text" id="rendszamtoup" />
+        <label>Year</label>
+        <input type="number" id="gyartasiEvtoup" />
+        <label>Brand</label>
+        <input type="text" id="markatoup" />
+        <label>Fuel type</label>
+        <input type="text" id="uzemanyagtoupdate" />
+
+        <button type="button" onclick="update()">Update Fuel</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>License Plate Number</th>
+                <th>Year</th>
+                <th>Brand</th>
+                <th>Fuel type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        </tbody>
+    </table>
+    <h2>Cost by cars</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>License Plate Number</th>
+                <th>Sum</th>
+            </tr>
+        </thead>
+        <tbody id="sumarea">
+        </tbody>
+    </table>
+    <h2>People who paid more than 2000</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>License Plate Number</th>
+                <th>Name</th>
+                <th>Fee</th>
+            </tr>
+        </thead>
+        <tbody id="morearea">
+        </tbody>
+    </table>
+    <h2>People who spent more than 8 hours</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>License Plate Number</th>
+                <th>Person Id</th>
+                <th>Name</th>
+                <th>Time</th>
+                <th>Fee</th>
+            </tr>
+        </thead>
+        <tbody id="overarea">
+        </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Parkolo.Program</name>
+    </assembly>
+    <members>
+        <member name="T:Parkolo.Program.Factory">
+            <summary>
+            A factory class.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Program.Factory.CreateParkolasLogic">
+            <summary>
+            Create parkolas logic.
+            </summary>
+            <returns>ParkolasLogic object.</returns>
+        </member>
+        <member name="M:Parkolo.Program.Factory.CreateCarLogic">
+            <summary>
+            Create ca logic.
+            </summary>
+            <returns>CarLogic object.</returns>
+        </member>
+        <member name="T:Parkolo.Program.MainProgram">
+            <summary>
+            Main Program.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Parkolo.Data</name>
+    </assembly>
+    <members>
+        <member name="T:Parkolo.Data.Auto">
+            <summary>
+            Auto class.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Data.Auto.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Parkolo.Data.Auto"/> class.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.Auto.Rendszam">
+            <summary>
+            Gets or sets get and set for license plate number.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.Auto.Marka">
+            <summary>
+            Gets or sets get and set for brand.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.Auto.GyartasiEv">
+            <summary>
+            Gets or sets get and set for year of manufacture.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.Auto.Uzemanyag">
+            <summary>
+            Gets or sets get and set for fuel type.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.Auto.Parkolas">
+            <summary>
+            Gets or sets collection of Parkolas objects.
+            </summary>
+        </member>
+        <member name="T:Parkolo.Data.Parkolas">
+            <summary>
+            Parkolas class.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.Parkolas.ParkoloId">
+            <summary>
+            Gets or sets for parkoloid.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.Parkolas.Rendszam">
+            <summary>
+            Gets or sets for license plate number.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.Parkolas.SzemelyId">
+            <summary>
+            Gets or sets for personId.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.Parkolas.ParkolohelySzam">
+            <summary>
+            Gets or sets for Parking spot.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.Parkolas.Koltseg">
+            <summary>
+            Gets or sets for cost.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.Parkolas.EltoltottIdo">
+            <summary>
+            Gets or sets for time spent.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.Parkolas.ParkolohelySzamNavigation">
+            <summary>
+            Gets or sets to manage parkolohely between tables.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.Parkolas.RendszamNavigation">
+            <summary>
+            Gets or sets to manage licesne plate number between tables.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.Parkolas.Szemely">
+            <summary>
+            Gets or sets to manage Szemely between tables.
+            </summary>
+        </member>
+        <member name="T:Parkolo.Data.ParkoloContext">
+            <summary>
+            Context class.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Data.ParkoloContext.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Parkolo.Data.ParkoloContext"/> class.
+            make sure database is created.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Data.ParkoloContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Parkolo.Data.ParkoloContext})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Parkolo.Data.ParkoloContext"/> class.
+            Parkolo context.
+            </summary>
+            <param name="options">options.</param>
+        </member>
+        <member name="P:Parkolo.Data.ParkoloContext.Autos">
+            <summary>
+            Gets or sets for Auto entites.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.ParkoloContext.Parkolas">
+            <summary>
+            Gets or sets for Parkolas entites.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.ParkoloContext.Parkolos">
+            <summary>
+            Gets or sets for Parkolo entites.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.ParkoloContext.Szemelies">
+            <summary>
+            Gets or sets for Szemely entites.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Data.ParkoloContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Configuring.
+            </summary>
+            <param name="optionsBuilder">option builder.</param>
+        </member>
+        <member name="M:Parkolo.Data.ParkoloContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Moded builder.
+            </summary>
+            <param name="modelBuilder">model builder.</param>
+        </member>
+        <member name="T:Parkolo.Data.ParkoloSpots">
+            <summary>
+            Class Parkolo.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Data.ParkoloSpots.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Parkolo.Data.ParkoloSpots"/> class.
+            Parkolo contructor.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.ParkoloSpots.ParkolohelySzam">
+            <summary>
+            Gets or sets for Parking spot number.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.ParkoloSpots.Meret">
+            <summary>
+            Gets or sets for size.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.ParkoloSpots.ElektromosE">
+            <summary>
+            Gets or sets  si electric.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.ParkoloSpots.Parkolas">
+            <summary>
+            Gets or sets collection of Parkolas objects.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Data.ParkoloSpots.ToString">
+            <summary>
+            Tostring for Tests.
+            </summary>
+            <returns>data in string.</returns>
+        </member>
+        <member name="T:Parkolo.Data.Szemely">
+            <summary>
+            Szemely class.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Data.Szemely.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Parkolo.Data.Szemely"/> class.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.Szemely.SzemelyId">
+            <summary>
+            Gets or sets for person id.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.Szemely.Nev">
+            <summary>
+            Gets or sets for name.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.Szemely.Nem">
+            <summary>
+            Gets or sets for gender.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.Szemely.SzuletesiIdo">
+            <summary>
+            Gets or sets for date of birth.
+            </summary>
+        </member>
+        <member name="P:Parkolo.Data.Szemely.Parkolas">
+            <summary>
+            Gets or sets collection of Parkolas.
+            </summary>
+        </member>
+    </members>
+</doc>

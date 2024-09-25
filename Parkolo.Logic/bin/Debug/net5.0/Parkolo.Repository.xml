@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Parkolo.Repository</name>
+    </assembly>
+    <members>
+        <member name="T:Parkolo.Repository.AutoRepository">
+            <summary>
+            MainRepository for Auto.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Repository.AutoRepository.#ctor(Parkolo.Data.ParkoloContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Parkolo.Repository.AutoRepository"/> class.
+            </summary>
+            <param name="ctx">context.</param>
+        </member>
+        <member name="M:Parkolo.Repository.AutoRepository.ChangeFuel(System.String,System.String)">
+            <summary>
+            Change fuel type.
+            </summary>
+            <param name="plateNum">license plate number.</param>
+            <param name="fuel">fuel type.</param>
+        </member>
+        <member name="M:Parkolo.Repository.AutoRepository.GetOne(System.String)">
+            <summary>
+            To get one Auto object.
+            </summary>
+            <param name="id">license plate number.</param>
+            <returns>An Auto object.</returns>
+        </member>
+        <member name="M:Parkolo.Repository.AutoRepository.Add(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            To add a new entity.
+            </summary>
+            <param name="licensePlate">license plate number.</param>
+            <param name="brand">brand name.</param>
+            <param name="year">year of manufacture.</param>
+            <param name="fuel">fuel type.</param>
+        </member>
+        <member name="M:Parkolo.Repository.AutoRepository.Delete(System.String)">
+            <summary>
+            To delete an entity.
+            </summary>
+            <param name="licensePlate">license plate number.</param>
+        </member>
+        <member name="T:Parkolo.Repository.IAutoRepository">
+            <summary>
+            Entity interface.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Repository.IAutoRepository.ChangeFuel(System.String,System.String)">
+            <summary>
+            Changes fueal type for car.
+            </summary>
+            <param name="plateNum">license plate number.</param>
+            <param name="fuel">fuel type.</param>
+        </member>
+        <member name="M:Parkolo.Repository.IAutoRepository.GetOne(System.String)">
+            <summary>
+            Gets an object which matches the id=key.
+            </summary>
+            <param name="id">key.</param>
+            <returns>Auto object.</returns>
+        </member>
+        <member name="T:Parkolo.Repository.IParkolasRepository">
+            <summary>
+            Entity interface.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Repository.IParkolasRepository.ChangeSpot(System.String,System.Int32)">
+            <summary>
+            Changes parking spot for car.
+            </summary>
+            <param name="rendszam">Cars license plate number to find.</param>
+            <param name="newSpot">New parking spot number.</param>
+        </member>
+        <member name="M:Parkolo.Repository.IParkolasRepository.GetOne(System.String)">
+            <summary>
+            Gets a Parkolas object which has id=key.
+            </summary>
+            <param name="id">key.</param>
+            <returns>Parkolas object.</returns>
+        </member>
+        <member name="T:Parkolo.Repository.IParkoloRepository">
+            <summary>
+            Entity interface.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Repository.IParkoloRepository.ChangeSize(System.Int32,System.Int32)">
+            <summary>
+            Changes the spot size.
+            </summary>
+            <param name="spot">The spot id.</param>
+            <param name="newSize">New size of the spot.</param>
+        </member>
+        <member name="M:Parkolo.Repository.IParkoloRepository.GetOne(System.Int32)">
+            <summary>
+            Search for a Parkol.
+            </summary>
+            <param name="id">key.</param>
+            <returns>Parkolo object which matches the condition.</returns>
+        </member>
+        <member name="T:Parkolo.Repository.IRepository`1">
+            <summary>
+            Main repository.
+            </summary>
+            <typeparam name="T"> T means class.</typeparam>
+        </member>
+        <member name="M:Parkolo.Repository.IRepository`1.GetAll">
+            <summary>
+            Get all object from the database.
+            </summary>
+            <returns>Queryable list.</returns>
+        </member>
+        <member name="M:Parkolo.Repository.IRepository`1.InsertOne(`0)">
+            <summary>
+            To insert an entity.
+            </summary>
+            <param name="entity">class.</param>
+        </member>
+        <member name="M:Parkolo.Repository.IRepository`1.Delete(`0)">
+            <summary>
+            To delete an entity.
+            </summary>
+            <param name="entity">Class.</param>
+        </member>
+        <member name="T:Parkolo.Repository.ISzemelyRepository">
+            <summary>
+            Entity interface.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Repository.ISzemelyRepository.ChangeName(System.Int32,System.String)">
+            <summary>
+            Changes persons name.
+            </summary>
+            <param name="id">Person id.</param>
+            <param name="newName">New Name.</param>
+        </member>
+        <member name="M:Parkolo.Repository.ISzemelyRepository.GetOne(System.Int32)">
+            <summary>
+            Szemely object that has id as a key.
+            </summary>
+            <param name="id">key to find.</param>
+            <returns>Szemely object.</returns>
+        </member>
+        <member name="T:Parkolo.Repository.MainRepository`1">
+            <summary>
+            Main repository.
+            </summary>
+            <typeparam name="T">T is entity.</typeparam>
+        </member>
+        <member name="F:Parkolo.Repository.MainRepository`1.ctx">
+            <summary>
+            Context to work with.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Repository.MainRepository`1.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Parkolo.Repository.MainRepository`1"/> class.
+            </summary>
+            <param name="ctx">context.</param>
+        </member>
+        <member name="M:Parkolo.Repository.MainRepository`1.GetAll">
+            <summary>
+            To get all data from the tables.
+            </summary>
+            <returns>Every data.</returns>
+        </member>
+        <member name="M:Parkolo.Repository.MainRepository`1.InsertOne(`0)">
+            <summary>
+            Add new data.
+            </summary>
+            <param name="entity">Like tables.</param>
+        </member>
+        <member name="M:Parkolo.Repository.MainRepository`1.Delete(`0)">
+            <summary>
+            Delete an entity.
+            </summary>
+            <param name="entity">An entity to delete.</param>
+        </member>
+        <member name="T:Parkolo.Repository.ParkolasRepository">
+            <summary>
+            MainRepository for connections.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Repository.ParkolasRepository.#ctor(Parkolo.Data.ParkoloContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Parkolo.Repository.ParkolasRepository"/> class.
+            </summary>
+            <param name="ctx">context.</param>
+        </member>
+        <member name="M:Parkolo.Repository.ParkolasRepository.ChangeSpot(System.String,System.Int32)">
+            <summary>
+            Changes spot.
+            </summary>
+            <param name="rendszam">license plate numeber.</param>
+            <param name="newSpot">new spot.</param>
+        </member>
+        <member name="M:Parkolo.Repository.ParkolasRepository.GetOne(System.String)">
+            <summary>
+            To get one Parkolas object.
+            </summary>
+            <param name="id">license plate number.</param>
+            <returns>Parkolas object.</returns>
+        </member>
+        <member name="T:Parkolo.Repository.ParkoloRepository">
+            <summary>
+            MainRepository for Parkolo.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Repository.ParkoloRepository.#ctor(Parkolo.Data.ParkoloContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Parkolo.Repository.ParkoloRepository"/> class.
+            </summary>
+            <param name="ctx">context.</param>
+        </member>
+        <member name="M:Parkolo.Repository.ParkoloRepository.ChangeSize(System.Int32,System.Int32)">
+            <summary>
+            Changes spot size.
+            </summary>
+            <param name="spot">spot number.</param>
+            <param name="newSize">new size of spot.</param>
+        </member>
+        <member name="M:Parkolo.Repository.ParkoloRepository.GetOne(System.Int32)">
+            <summary>
+            To get one entity.
+            </summary>
+            <param name="id">id to search by.</param>
+            <returns>A parkolo entity.</returns>
+        </member>
+        <member name="T:Parkolo.Repository.SzemelyRepository">
+            <summary>
+            MainRepository for People.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Repository.SzemelyRepository.#ctor(Parkolo.Data.ParkoloContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Parkolo.Repository.SzemelyRepository"/> class.
+            </summary>
+            <param name="ctx">context.</param>
+        </member>
+        <member name="M:Parkolo.Repository.SzemelyRepository.ChangeName(System.Int32,System.String)">
+            <summary>
+            Changes name for person by id.
+            </summary>
+            <param name="id">person's id.</param>
+            <param name="newName">person's new name.</param>
+        </member>
+        <member name="M:Parkolo.Repository.SzemelyRepository.GetOne(System.Int32)">
+            <summary>
+            To get one entity.
+            </summary>
+            <param name="id">id to search by.</param>
+            <returns>A Szemely object.</returns>
+        </member>
+    </members>
+</doc>

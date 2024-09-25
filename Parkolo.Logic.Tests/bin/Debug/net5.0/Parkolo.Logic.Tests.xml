@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Parkolo.Logic.Tests</name>
+    </assembly>
+    <members>
+        <member name="T:Parkolo.Logic.Tests.CarLogicTests">
+            <summary>
+            Class for tests.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Logic.Tests.CarLogicTests.GetAllAuto">
+            <summary>
+            Car GetAll() test.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Logic.Tests.CarLogicTests.DeleteParkoloSpot">
+            <summary>
+            Tests Delete parkolo entity.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Logic.Tests.CarLogicTests.TestSumCost">
+            <summary>
+            Non crud test.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Logic.Tests.CarLogicTests.TestUsedParkingSpots">
+            <summary>
+            Used parking spots over 13.
+            </summary>
+        </member>
+        <member name="T:Parkolo.Logic.Tests.ParkolasLogicTests">
+            <summary>
+            ParkolasLogic Tests class.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Logic.Tests.ParkolasLogicTests.TestGetOneSzemelyByID">
+            <summary>
+            Tests add Szemely.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Logic.Tests.ParkolasLogicTests.TestAddParkolas">
+            <summary>
+            Tests Add new Parkolas.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Logic.Tests.ParkolasLogicTests.TestChangePersonName">
+            <summary>
+            Tests change person name.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Logic.Tests.ParkolasLogicTests.TestMalePeople">
+            <summary>
+            MalePeople Tests.
+            </summary>
+        </member>
+        <member name="M:Parkolo.Logic.Tests.ParkolasLogicTests.TestPeoplePaid2000">
+            <summary>
+            PeoplePaidMoreThan200 Tests.
+            </summary>
+        </member>
+    </members>
+</doc>
